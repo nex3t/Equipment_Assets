@@ -153,7 +153,7 @@ def apply_adoption_curves(simulation_df, pillar_configs, enable_curves=True):
 def load_enriched_data():
     """Load enriched data with Super Structure columns"""
     try:
-        df = pd.read_excel("Equipment_Simulation_SuperStructure_Complete.xlsx", 
+        df = pd.read_excel("Equipment_Simulation_SuperStructure_Optimized.xlsx", 
                           sheet_name="Enriched_Data")
         return df
     except FileNotFoundError:
@@ -1029,7 +1029,7 @@ with tab6:
     
     if enriched_df is None:
         st.warning("⚠️ This visualization requires enriched Super Structure data.")
-        st.info("Run the enrichment notebook first to generate `Equipment_Simulation_SuperStructure_Complete.xlsx`")
+        st.info("Run the enrichment notebook first to generate `Equipment_Simulation_SuperStructure_Optimized.xlsx`")
     else:
         col1, col2 = st.columns([1, 1])
         
